@@ -23,11 +23,13 @@ namespace EvidentaStudentiFormular
 
         private const int LATIME_CONTROL = 150; //in px
         private const int INALTIME_CONTROL = 20; //in px
-        private const int DIMENSIUNE_PAS_Y = 30;
-        private const int DIMENSIUNE_PAS_X = 170;
+        private const int DIMENSIUNE_Y = 805;
+        private const int DIMENSIUNE_X = 500;
         private const int LUNGIME_MIN = 1;
         private const int LUNGIME_MAX = 15;
         private static int ID = 1;
+        private const string MAN = "Manuala";
+        private const string AUT = "Automata";
 
         private Label LabelMarca;
         private TextBox TextMarca;
@@ -59,9 +61,9 @@ namespace EvidentaStudentiFormular
 
         public FormularMasini()
         {
-            this.Size = new System.Drawing.Size(500, 850);
-            this.MaximumSize = new System.Drawing.Size(500, 850);
-            this.MinimumSize = new System.Drawing.Size(500, 850);
+            this.Size = new System.Drawing.Size(DIMENSIUNE_X, DIMENSIUNE_Y);
+            this.MaximumSize = new System.Drawing.Size(DIMENSIUNE_X, DIMENSIUNE_Y);
+            this.MinimumSize = new System.Drawing.Size(DIMENSIUNE_X, DIMENSIUNE_Y);
             this.Font = new Font("Arial", 10, FontStyle.Bold);
             this.ForeColor = Color.White;
             this.Text = " Evidenta Masini";
@@ -70,35 +72,35 @@ namespace EvidentaStudentiFormular
             LabelMarca = new Label();
             LabelMarca.Width = LATIME_CONTROL;
             LabelMarca.Height = INALTIME_CONTROL;
-            LabelMarca.Location = new System.Drawing.Point(0, 10);
+            LabelMarca.Location = new System.Drawing.Point(DIMENSIUNE_X - 500, DIMENSIUNE_Y - 790);
             LabelMarca.Text = "Marca";
             LabelMarca.BackColor = Color.Black;
             Controls.Add(LabelMarca);
 
             TextMarca = new TextBox();
             TextMarca.Width = LATIME_CONTROL;
-            TextMarca.Location = new System.Drawing.Point(300, 10);
+            TextMarca.Location = new System.Drawing.Point(DIMENSIUNE_X - 200, DIMENSIUNE_Y - 790);
             Controls.Add(TextMarca);
 
             //Model
             LabelModel = new Label();
             LabelModel.Width = LATIME_CONTROL;
             LabelModel.Height = INALTIME_CONTROL;
-            LabelModel.Location = new System.Drawing.Point(0, 50);
+            LabelModel.Location = new System.Drawing.Point(DIMENSIUNE_X - 500, DIMENSIUNE_Y - 750);
             LabelModel.Text = "Model";
             LabelModel.BackColor = Color.Black;
             Controls.Add(LabelModel);
 
             TextModel = new TextBox();
             TextModel.Width = LATIME_CONTROL;
-            TextModel.Location = new System.Drawing.Point(300, 50);
+            TextModel.Location = new System.Drawing.Point(DIMENSIUNE_X - 200, DIMENSIUNE_Y - 750);
             Controls.Add(TextModel);
 
             //Pret
             LabelPret = new Label();
             LabelPret.Width = LATIME_CONTROL;
             LabelPret.Height = INALTIME_CONTROL;
-            LabelPret.Location = new System.Drawing.Point(0, 90);
+            LabelPret.Location = new System.Drawing.Point(DIMENSIUNE_X - 500, DIMENSIUNE_Y -710);
             LabelPret.Text = "Pret";
             LabelPret.BackColor = Color.Black;
             Controls.Add(LabelPret);
@@ -106,14 +108,14 @@ namespace EvidentaStudentiFormular
 
             TextPret = new TextBox();
             TextPret.Width = LATIME_CONTROL;
-            TextPret.Location = new System.Drawing.Point(300, 90);
+            TextPret.Location = new System.Drawing.Point(DIMENSIUNE_X - 200, DIMENSIUNE_Y - 710);
             Controls.Add(TextPret);
 
             //AnF
             LabelAnF = new Label();
             LabelAnF.Width = LATIME_CONTROL;
             LabelAnF.Height = INALTIME_CONTROL;
-            LabelAnF.Location = new System.Drawing.Point(0, 130);
+            LabelAnF.Location = new System.Drawing.Point(DIMENSIUNE_X - 500, DIMENSIUNE_Y - 670);
             LabelAnF.Text = "An fabricatie";
             LabelAnF.BackColor = Color.Black;
             Controls.Add(LabelAnF);
@@ -121,14 +123,14 @@ namespace EvidentaStudentiFormular
 
             TextAnF = new TextBox();
             TextAnF.Width = LATIME_CONTROL;
-            TextAnF.Location = new System.Drawing.Point(300, 130);
+            TextAnF.Location = new System.Drawing.Point(DIMENSIUNE_X - 200, DIMENSIUNE_Y - 670);
             Controls.Add(TextAnF);
 
             //Putere
             LabelPutere = new Label();
             LabelPutere.Width = LATIME_CONTROL;
             LabelPutere.Height = INALTIME_CONTROL;
-            LabelPutere.Location = new System.Drawing.Point(0, 170);
+            LabelPutere.Location = new System.Drawing.Point(DIMENSIUNE_X - 500, DIMENSIUNE_Y - 630);
             LabelPutere.Text = "Putere(CP)";
             LabelPutere.BackColor = Color.Black;
             Controls.Add(LabelPutere);
@@ -136,7 +138,7 @@ namespace EvidentaStudentiFormular
 
             TextPutere = new TextBox();
             TextPutere.Width = LATIME_CONTROL;
-            TextPutere.Location = new System.Drawing.Point(300, 170);
+            TextPutere.Location = new System.Drawing.Point(DIMENSIUNE_X - 200, DIMENSIUNE_Y - 630);
             Controls.Add(TextPutere);
 
 
@@ -144,7 +146,7 @@ namespace EvidentaStudentiFormular
             LabelCuloare = new Label();
             LabelCuloare.Width = LATIME_CONTROL;
             LabelCuloare.Height = INALTIME_CONTROL;
-            LabelCuloare.Location = new System.Drawing.Point(0, 210);
+            LabelCuloare.Location = new System.Drawing.Point(DIMENSIUNE_X - 500, DIMENSIUNE_Y - 590);
             LabelCuloare.Text = "Culoare";
             LabelCuloare.BackColor = Color.Black;
             Controls.Add(LabelCuloare);
@@ -152,14 +154,14 @@ namespace EvidentaStudentiFormular
 
             TextCuloare = new TextBox();
             TextCuloare.Width = LATIME_CONTROL;
-            TextCuloare.Location = new System.Drawing.Point(300, 210);
+            TextCuloare.Location = new System.Drawing.Point(DIMENSIUNE_X - 200, DIMENSIUNE_Y - 590);
             Controls.Add(TextCuloare);
 
             //Cutie
             LabelCutie = new Label();
             LabelCutie.Width = LATIME_CONTROL;
             LabelCutie.Height = INALTIME_CONTROL;
-            LabelCutie.Location = new System.Drawing.Point(0, 250);
+            LabelCutie.Location = new System.Drawing.Point(DIMENSIUNE_X - 500, DIMENSIUNE_Y - 550);
             LabelCutie.Text = "Cutie viteze";
             LabelCutie.BackColor = Color.Black;
             Controls.Add(LabelCutie);
@@ -167,14 +169,14 @@ namespace EvidentaStudentiFormular
 
             TextCutie = new TextBox();
             TextCutie.Width = LATIME_CONTROL;
-            TextCutie.Location = new System.Drawing.Point(300, 250);
+            TextCutie.Location = new System.Drawing.Point(DIMENSIUNE_X - 200, DIMENSIUNE_Y - 550);
             Controls.Add(TextCutie);
 
             //butonAdd
             ButtonAdauga = new Button();
             ButtonAdauga.Width = 2*LATIME_CONTROL;
             ButtonAdauga.BackColor = Color.Brown;
-            ButtonAdauga.Location = new System.Drawing.Point(90, 290);
+            ButtonAdauga.Location = new System.Drawing.Point(DIMENSIUNE_X - 410, DIMENSIUNE_Y - 510);
             ButtonAdauga.Text = "Adauga";
             ButtonAdauga.Click += OnButtonAdaugaClicked;
             Controls.Add(ButtonAdauga);
@@ -183,7 +185,7 @@ namespace EvidentaStudentiFormular
             LabelInfoMasina = new Label();
             LabelInfoMasina.Width = 3*LATIME_CONTROL;
             LabelInfoMasina.Height = 13*INALTIME_CONTROL;
-            LabelInfoMasina.Location = new System.Drawing.Point(17, 370);
+            LabelInfoMasina.Location = new System.Drawing.Point(DIMENSIUNE_X - 483, DIMENSIUNE_Y - 430);
             LabelInfoMasina.Text = "INFORMATII MASINI:";
             LabelInfoMasina.BackColor = Color.Black;
             Controls.Add(LabelInfoMasina);
@@ -192,7 +194,7 @@ namespace EvidentaStudentiFormular
             ButtonClear = new Button();
             ButtonClear.Width =  LATIME_CONTROL;
             ButtonClear.BackColor = Color.Blue;
-            ButtonClear.Location = new System.Drawing.Point(170,330);
+            ButtonClear.Location = new System.Drawing.Point(DIMENSIUNE_X - 330, DIMENSIUNE_Y - 470);
             ButtonClear.Text = "Sterge date";
             ButtonClear.Click += OnButtonSterge;
             Controls.Add(ButtonClear);
@@ -201,10 +203,10 @@ namespace EvidentaStudentiFormular
             //Imagine
             Imagine = new PictureBox();
             Imagine.SizeMode = PictureBoxSizeMode.Zoom;
-            Imagine.Width =  2*LATIME_CONTROL;
-            Imagine.Height = 2*LATIME_CONTROL;
+            Imagine.Width =  2*LATIME_CONTROL - 100;
+            Imagine.Height = 2*LATIME_CONTROL - 50;
             Imagine.BackColor = Color.Transparent;
-            Imagine.Location = new System.Drawing.Point(67, 560);
+            Imagine.Location = new System.Drawing.Point(DIMENSIUNE_X - 370, DIMENSIUNE_Y - 240);
             Imagine.Image = Image.FromFile("C:/Users/Andrei/Desktop/car.gif");
             
             Controls.Add(Imagine);
@@ -232,8 +234,17 @@ namespace EvidentaStudentiFormular
              {
 
                  Masina m = new Masina(TextMarca.Text, TextModel.Text, System.Convert.ToInt64(TextPret.Text), System.Convert.ToInt32(TextAnF.Text), System.Convert.ToInt32(TextPutere.Text),TextCutie.Text);
-                 m.Culoare = (Culori)Enum.Parse(typeof(Culori), TextCuloare.Text, true);
-                 Random rnd = new Random();
+                 Culori a;
+                 int ok2 = 0;
+                 bool ok = Enum.TryParse(TextCuloare.Text, out a);
+                 if(TextCutie.Text == MAN || TextCutie.Text == AUT)
+                 {
+                    ok2 = 1;
+                 }
+                 if(ok==true && ok2!=0)
+                 {
+                    m.Culoare = (Culori)Enum.Parse(typeof(Culori), TextCuloare.Text, true);
+                    Random rnd = new Random();
 
                     for (int j = 0; j < rnd.Next(1, 6); j++)
                     {
@@ -241,11 +252,21 @@ namespace EvidentaStudentiFormular
                         m.Optiune = m.Optiune | op;
                     }
 
-                ButtonAdauga.ForeColor = Color.LimeGreen;
+                    ButtonAdauga.ForeColor = Color.LimeGreen;
+
+                    LabelInfoMasina.Text = LabelInfoMasina.Text + "\n" + ID + ": " + m.ConversieLaSirFisier2();
+                    ID++;
+                    adminMasini.AddMasina(m);
+                }
+                 else
+                 {
+                    if(ok==false)
+                    LabelCuloare.ForeColor = Color.Red;
+                    if(ok2==0)
+                    LabelCutie.ForeColor = Color.Red;
+                }
                  
-                 LabelInfoMasina.Text = LabelInfoMasina.Text + "\n" + ID + m.ConversieLaSirFisier2();
-                ID++;
-                 adminMasini.AddMasina(m);
+                 
              }
              if(TextMarca.Text.Length==0)
              {
@@ -284,7 +305,7 @@ namespace EvidentaStudentiFormular
          private void OnButtonSterge(object sender, System.EventArgs e)
          {
 
-                 LabelInfoMasina.Text = "";
+                 
                  TextCuloare.Text = "";
                  TextMarca.Text = "";
                  TextModel.Text= "";

@@ -131,7 +131,7 @@ namespace LibrarieModele
 
         public string ConversieLaSirFisier2()
         {
-            return string.Format("{0},{1},{2},{3},{4},{5},{6},{7}", Marca, Model, Pret, An_Fabricatie, Putere, Cutie_Viteze, Convert.ToInt32(Culoare), Convert.ToInt32(Optiune));
+            return string.Format("{0},{1},{2},{3},{4},{5},{6},{7}", Marca, Model, Pret, An_Fabricatie, Putere, Cutie_Viteze, Culoare, Convert.ToInt32(Optiune));
         }
 
         public Masina(string text)
